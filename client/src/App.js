@@ -14,6 +14,7 @@ import Tooures from './components/Tooures';
 const App = () => {
   return (
     <OrdersProvider>
+      
       <RestaurantsProvider>
         <Router>
           <Routes>
@@ -27,6 +28,7 @@ const App = () => {
             {/* <Route path='/tooures/:id' element={<Tooures/>}/> */}
         </Routes>
       </Router>
+
     </RestaurantsProvider>
   </OrdersProvider>
 
