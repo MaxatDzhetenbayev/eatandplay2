@@ -34,7 +34,7 @@ router.use('/images', express.static('upload/images'));
 router.post('/', upload.single('image'), async (req, res) => {
     try {
         const { title, description, category, cookingTime, price } = req.body;
-        const image_url = `http://localhost:${PORT}/images/${req.file.filename}`;
+        const image_url = `https://eatandplay2.onrender.com/images/${req.file.filename}`;
         const existingCategory = await Categories.findById(category);
         if (!existingCategory) {
             return res.status(404).json({ error: 'Категория не найдена' });

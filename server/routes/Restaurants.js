@@ -51,11 +51,11 @@ router.post(
       const preferencesArray = preferenceName.split(',').map(id => id.trim());
       const promotionsArray = JSON.parse(promotions).map((promotion, index) => ({
         description: promotion.description,
-        image: `http://localhost:${PORT}/images/${req.files["promotionImages"][index].filename}`
+        image: `https://eatandplay2.onrender.com/images/${req.files["promotionImages"][index].filename}`
       }));
 
-      const logo_url = `http://localhost:${PORT}/images/${req.files["logo"][0].filename}`;
-      const banner_url = `http://localhost:${PORT}/images/${req.files["banner"][0].filename}`;
+      const logo_url = `https://eatandplay2.onrender.com/images/${req.files["logo"][0].filename}`;
+      const banner_url = `https://eatandplay2.onrender.com/images/${req.files["banner"][0].filename}`;
 
       const newRestaurant = new Restaurant({
         title,
